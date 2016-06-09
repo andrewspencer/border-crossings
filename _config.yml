@@ -13,6 +13,7 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://andrewspencer.net" # the base hostname & protocol for your site
 twitter_username: andrewspencer74
+linkedin_username: andrewspenceritengineer
 
 excerpt_separator: <!--more-->
 permalink: /:year/:slug

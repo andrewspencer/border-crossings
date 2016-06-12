@@ -3,7 +3,12 @@ layout: post
 title:  "Solve foreign-key problems in DBUnit test data"
 date:   2011-02-15
 ---
-If you create small per-test datasets, <a href="http://www.dbunit.org/bestpractices.html#smalldatasets">as DBUnit advises</a>, you'll get intermittent build failures due to foreign-key violations.  This post explains (1) why this happens, (2) why small per-test datasets are still a good idea, and (3) one simple way to get around the problem.
+If you create small per-test datasets, <a href="http://dbunit.sourceforge.net/bestpractices.html">as DBUnit advises</a>, you'll get intermittent 
+build failures due to foreign-key violations.  
+This post explains (1) why this happens, (2) why small per-test datasets are still a good idea, and (3) one simple way to get around the problem.
+
+*NOTE* A reader wrote that this solution no longer works as of DBUnit 2.5. I am leaving this post up, since it still gets hits, and
+may still be of some help finding a solution.
 <!--more-->
 
 	<em>NB When I searched for solutions to this problem, I discovered that other kinds of foreign-key problem come up with DBUnit.  Some people have circular dependencies in their relational database schemas, which stops DBUnit from loading the test data.  If such is your case, I'm sorry to say that this post won't help you with it, and your best option is probably to just take yourself outside and shoot yourself now.  (Although some people seem to chosen instead to disable foreign key checking during test runs.)</em>
